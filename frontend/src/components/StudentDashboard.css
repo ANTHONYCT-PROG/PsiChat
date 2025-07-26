@@ -1,0 +1,267 @@
+body, .studentchat-bg {
+  font-family: 'Segoe UI', 'Roboto', 'Inter', Arial, sans-serif;
+  background: linear-gradient(135deg, #a7bfff 0%, #764ba2 100%);
+  margin: 0;
+  min-height: 100vh;
+}
+
+.studentchat-bg {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.studentchat-header {
+  background: linear-gradient(90deg, #e0e7ff 60%, #c3aed6 100%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.studentchat-header-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.studentchat-welcome h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #22223b;
+  margin: 0 0 5px 0;
+  letter-spacing: 0.5px;
+}
+.studentchat-welcome p {
+  color: #44475a;
+  margin: 0;
+  font-size: 1.1rem;
+}
+.studentchat-header-actions {
+  display: flex;
+  gap: 0.7rem;
+}
+.icon-btn {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #4a5568;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-btn:hover {
+  background: #edf2f7;
+  color: #667eea;
+  transform: translateY(-1px);
+}
+.logout-btn:hover {
+  color: #e53e3e;
+}
+
+.studentchat-main {
+  flex: 1;
+  padding: 2.5rem 0 1rem 0;
+}
+.studentchat-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.studentchat-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-bottom: 36px;
+}
+.studentchat-option-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 2.2rem 1.5rem 2.5rem 1.5rem;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.studentchat-option-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #38b2ac);
+}
+.primary-card::before {
+  background: linear-gradient(90deg, #667eea, #38b2ac);
+}
+.secondary-card::before {
+  background: linear-gradient(90deg, #c3aed6, #e67e22);
+}
+.studentchat-card-icon {
+  font-size: 2.7rem;
+  color: #667eea;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.secondary-card .studentchat-card-icon {
+  color: #e67e22;
+}
+.studentchat-card-content h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2d3748;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+.studentchat-card-content p {
+  color: #6c757d;
+  margin: 0 0 18px 0;
+  text-align: center;
+  line-height: 1.5;
+}
+.studentchat-btn {
+  width: 100%;
+  padding: 13px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  transition: all 0.3s;
+  margin-top: 5px;
+  cursor: pointer;
+  background: #667eea;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(102,126,234,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.studentchat-btn-primary {
+  background: linear-gradient(90deg, #667eea 0%, #38b2ac 100%);
+}
+.studentchat-btn-secondary {
+  background: linear-gradient(90deg, #c3aed6 0%, #e67e22 100%);
+}
+.studentchat-btn-success {
+  background: linear-gradient(90deg, #38b2ac 0%, #63e6be 100%);
+}
+.studentchat-btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.studentchat-quick-analysis {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 2.2rem 1.5rem;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  text-align: center;
+  margin-top: 10px;
+}
+.studentchat-quick-analysis h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2d3748;
+  margin: 0 0 10px 0;
+}
+.studentchat-quick-analysis p {
+  color: #6c757d;
+  margin: 0 0 18px 0;
+  font-size: 1rem;
+}
+.studentchat-quick-analysis .studentchat-btn {
+  display: inline-flex;
+  width: auto;
+  padding: 13px 28px;
+  font-size: 1rem;
+  gap: 10px;
+}
+
+.studentchat-bottom-nav {
+  background: #fff;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+  padding: 13px 0;
+  position: sticky;
+  bottom: 0;
+  z-index: 100;
+}
+.studentchat-nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.studentchat-nav-item {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 12px;
+  transition: all 0.3s;
+  color: #6c757d;
+  font-size: 12px;
+  font-weight: 500;
+}
+.studentchat-nav-item svg {
+  font-size: 20px;
+}
+.studentchat-nav-item:hover {
+  color: #667eea;
+  background-color: #f1f5fa;
+}
+.studentchat-nav-item.active {
+  color: #667eea;
+  background-color: rgba(102,126,234,0.12);
+}
+
+@media (max-width: 768px) {
+  .studentchat-header-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .studentchat-welcome h1 {
+    font-size: 1.1rem;
+  }
+  .studentchat-options-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .studentchat-option-card {
+    padding: 1.2rem;
+  }
+  .studentchat-card-icon {
+    font-size: 2rem;
+  }
+  .studentchat-card-content h3 {
+    font-size: 1.1rem;
+  }
+  .studentchat-nav-container {
+    gap: 8px;
+  }
+  .studentchat-nav-item {
+    font-size: 11px;
+    padding: 8px;
+  }
+  .studentchat-nav-item svg {
+    font-size: 18px;
+  }
+} 
